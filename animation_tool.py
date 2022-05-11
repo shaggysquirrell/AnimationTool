@@ -23,7 +23,7 @@ class Settings():
         self.animation_time = 0
         self.reset_time = 0
         
-        self.player_sheet = 'test2.png'
+        self.player_sheet = ''
         self.rows = 1
         self.columns = 1
         
@@ -318,10 +318,6 @@ def main_game(ai_set):
     
     screen = pygame.display.set_mode(ai_set.screen_size, pygame.RESIZABLE)
     pygame.display.set_caption('Animation_Tool')
-    
-    ai_set.player_frames = strip_sheet(ai_set, ai_set.rows, ai_set.columns, ai_set.player_sheet)
-    print(ai_set.player_frames)
-    player = Player(screen, ai_set)
     
     ai_set.text_boxes.append(Text_box(screen, 200, 60, 200, 50, 'Image:'))
     ai_set.text_boxes.append(Text_box(screen, 200, 120, 200, 50, 'Rows:'))
